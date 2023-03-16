@@ -48,3 +48,9 @@ Entre des personnages comme Walter White, Gus Fring, Jesse Pinkman, etc, on veut
 Nous n'avons pas réellement trouvé de personnes qui utilisent ces données.<br>
 Dans un premier temps, sur [Kaggle](https://www.kaggle.com/datasets/varpit94/breaking-bad-tv-show-all-seasons-episodes-data) nous avons trouvé une personne qui a utilisé les données du csv, mais apparemment sans réel but mis à part pour l'amusement.<br>
 Nous avons ensuite eu vent de l'API, via un site où une personne s'est amusée à créer un tableau montrant le nombre de morts totales par saison avec leur cause.
+
+------------------------
+
+## Thématique
+
+Voici notre Wireframe pour notre projet
