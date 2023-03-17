@@ -53,7 +53,7 @@ Nous avons ensuite eu vent de l'API, via un site où une personne s'est amusée 
 
 ## Thématique
 
-Voici notre wireframe our notre projet, il contient une première page avec les 6 personnages clés, quand on clique dessus, on a accès a des informations sur ces personnages et un histogramme du nombre de morts par saison liées à ce personnage.
+Voici notre wireframe pour notre projet, il contient une première page avec les 6 personnages clés, quand on clique dessus, on a accès a des informations sur ces personnages et un histogramme du nombre de morts par saison liées à ce personnage.
 Quand on clique sur le logo breaking bad sur la page d'accueil on a accès a une pus grande visualisation sur les personnages, leurs nombres de morts causées en fonction des épisodes, on y ajoutera aussi des bulles à certains endroits clés pour racconter une histoire.
 en scrollant depuis cette visualisation, on a accès finalement au personnage le plus meurtrier de la série, avec des infos sur lui.
 
