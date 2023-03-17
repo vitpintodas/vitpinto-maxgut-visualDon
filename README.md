@@ -1,4 +1,4 @@
-# Exercice Visualisation de données
+# Projet Visualisation de données
 
 *Auteurs: Vitor Emanuel Pinto Da Silva & Maxime Gutknecht*
 
