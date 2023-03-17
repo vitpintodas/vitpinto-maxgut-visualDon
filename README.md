@@ -38,7 +38,7 @@ Dans l'API, il y a possiblité de récupérer des informations très précises c
 
 ## But
 
-Notre objectif est de prendre certains personnages clefs de la série Breaking Bad et d'afficher leur nombre de vicitmes par saison. L'objectif est de voir qui est le réel méchant de la série.
+Notre objectif est de prendre certains personnages clefs de la série Breaking Bad et d'afficher leur nombre de victimes par saison. L'objectif est de voir qui est le réel méchant de la série.
 Entre des personnages comme Walter White, Gus Fring, Jesse Pinkman, etc, on veut voir qui est le plus meurtrier puisque chacun d'eux n'est pas forcément un personnage "gentil".
 
 ------------------------
@@ -52,5 +52,9 @@ Nous avons ensuite eu vent de l'API, via un site où une personne s'est amusée 
 ------------------------
 
 ## Thématique
+
+Voici notre wireframe our notre projet, il contient une première page avec les 6 personnages clés, quand on clique dessus, on a accès a des informations sur ces personnages et un histogramme du nombre de morts par saison liées à ce personnage.
+Quand on clique sur le logo breaking bad sur la page d'accueil on a accès a une pus grande visualisation sur les personnages, leurs nombres de morts causées en fonction des épisodes, on y ajoutera aussi des bulles à certains endroits clés pour racconter une histoire.
+en scrollant depuis cette visualisation, on a accès finalement au personnage le plus meurtrier de la série, avec des infos sur lui.
 
 ![wireframe](https://user-images.githubusercontent.com/91839631/225916179-139f3b48-496a-4d11-abbb-709dca630fc9.png)
