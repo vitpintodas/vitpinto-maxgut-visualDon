@@ -53,4 +53,4 @@ Nous avons ensuite eu vent de l'API, via un site où une personne s'est amusée 
 
 ## Thématique
 
-Voici notre Wireframe pour notre projet
+![wireframe](https://user-images.githubusercontent.com/91839631/225916179-139f3b48-496a-4d11-abbb-709dca630fc9.png)
