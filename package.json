@@ -1,4 +1,13 @@
 {
+  "name": "vitpinto-maxgut-visualdon",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "dev": "parcel build"
+  },
   "dependencies": {
     "d3": "^7.8.2",
     "parcel": "^2.8.3"
