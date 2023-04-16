@@ -1,3 +1,23 @@
+#container {
+    /* Code reprit depuis codepen from Chris Coyier */
+    /* Il a été cependant modifié pour le projet */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 80%;
+
+    background: green;
+
+    /* affichage en grid pour mieux gérer l'espace des personnages */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+
 /* médiad queries */
 @media only screen and (min-device-width: 1200px) {
     body {
