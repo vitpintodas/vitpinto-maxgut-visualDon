@@ -31,7 +31,7 @@
     /* affichage grid avec trois colonnes et trois rangées */
     display: grid;
     grid-template-columns: 50px auto 50px;
-    grid-template-rows: 80px auto 80px;
+    grid-template-rows: 35px auto 30px;
     column-gap: 10px;
     row-gap: 15px;
 
@@ -80,6 +80,9 @@
 .portrait {
     align-self: center;
     justify-self: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
 }
 
 /* nom du personnage */
@@ -95,7 +98,9 @@
     justify-self: center;
 }
 
-/* médiad queries */
+/*
+* Media queries pour affichage du background
+*/
 @media only screen and (min-device-width: 1200px) {
     body {
         background-size: cover;

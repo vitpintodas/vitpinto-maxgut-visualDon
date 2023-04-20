@@ -7,79 +7,30 @@
     <title>Breaking Bad Bagage mortuère</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <!-- link to the javascript code -->
+    <script src="js/code.js" defer></script>
 </head>
 <body>
     <!-- container des cartes de personnage -->
     <div id="container">
-        <!-- toutes les cartes de personnages sous forme de div -->
-        <div class="card">
-            <div class="victim-number">
-                N
+        <!-- Template HTML pour permettre affichage de toutes les cards -->
+        <template id="template">
+            <div class="card">
+                <div class="victim-number">
+                    N
+                </div>
+                <div class="cara-img">
+                    <img src="assets/personnages/walter.png" alt="image_personnage" class="portrait">
+                </div>
+                <div class="cara-name">
+                    nom personnage
+                </div>
             </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
-        <div class="card">
-            <div class="victim-number">
-                N
-            </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
-        <div class="card">
-            <div class="victim-number">
-                N
-            </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
-        <div class="card">
-            <div class="victim-number">
-                N
-            </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
-        <div class="card">
-            <div class="victim-number">
-                N
-            </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
-        <div class="card">
-            <div class="victim-number">
-                N
-            </div>
-            <div class="cara-img">
-                <img src="" alt="image_personnage" class="portrait">
-            </div>
-            <div class="cara-name">
-                nom personnage
-            </div>
-        </div>
+        </template>
         <div id="logo">
-            <img src="assets/logo/breakingBad-logo.png" alt="Logo de breaking bad">
+            <a href="">
+                <img src="assets/logo/breakingBad-logo.png" alt="Logo de breaking bad">
+            </a>
         </div>
     </div>
 </body>
