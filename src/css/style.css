@@ -44,7 +44,7 @@
     margin-right: 15px;
 
     /* From https://css.glass */
-    background: rgba(31, 96, 50, 0.65);
+    background: rgba(31, 96, 50, 0.85);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.9px);
@@ -58,8 +58,8 @@
     grid-row: 1;
     text-align: center;
     font-size: 2em;
-    font-weight: bold;
-    color: #ff0000;
+    font-weight: bolder;
+    color: White;
 }
 
 /* image du personnage */
@@ -70,7 +70,7 @@
     grid-row-end: 3;
 
     text-align: center;
-    color: red;
+    color: White;
 
     display: flex;
     justify-content: center;
@@ -80,8 +80,8 @@
 .portrait {
     align-self: center;
     justify-self: center;
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
 }
 
@@ -96,6 +96,10 @@
 
     align-self: center;
     justify-self: center;
+
+    color: White;
+    font-size: 1.3em;
+    font-weight: bolder;
 }
 
 /*
