@@ -1,3 +1,8 @@
+import * as d3 from 'd3';
+
+/**
+ * Affichage des 6 cartes avec les données du CSV
+ */
 function copyTemplate() {
     const node = document.querySelector('#template').cloneNode(true);
 
