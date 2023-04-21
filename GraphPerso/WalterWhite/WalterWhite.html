@@ -1,0 +1,122 @@
+<!-- graphique Walter White -->
+<!DOCTYPE html>
+<html>  
+  <head>
+    <title>Walter White</title>
+  </head>
+
+</html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+
+<script>
+
+
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 70, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Parse the Data
+d3.csv("DataWalterWhite.csv", function(data) {
+
+  // sort data
+  data.sort(function(b, a) {
+    return a.value + b.value;
+ });
+
+  // X axis
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(data.map(function(d) { return d.saison; }))
+    .padding(0.2);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
+
+      svg.append("text")
+  .attr("class", "x label")
+  .attr("text-anchor", "end")
+  .attr("x", width)
+  .attr("y", height + margin.top + 20)
+  .text("Saison");
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) { return +d.value; })])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+    svg.append("text")
+  .attr("class", "y label")
+  .attr("text-anchor", "end")
+  .attr("y", -margin.left + 20)
+  .attr("x", -margin.top)
+  .attr("transform", "rotate(-90)")
+  .text("Nombre de victimes");
+
+  // Bars
+svg.selectAll("mybar")
+.data(data)
+.enter()
+.append("rect")
+.attr("class", "bar")
+.attr("x", function(d) { return x(d.saison); })
+.attr("y", function(d) { return y(d.value); })
+.attr("width", x.bandwidth())
+.attr("rx", 5)
+.attr("ry", 5)
+.attr("height", function(d) { return height - y(d.value); })
+.attr("fill", "#0e1117")//couleur des batons
+.on("mouseover", function(d) {
+d3.select(this)
+.transition()
+.duration(200)
+.attr("y", function(d) { return y(d.value) - 2; })
+.attr("height", function(d) { return height - y(d.value) + 2; })
+.attr("fill", "#dca523");
+svg.append("text")
+.attr('class', 'value')
+.attr('x', x(d.saison) + x.bandwidth() / 2)
+.attr('y', y(d.value) - 10)
+.attr('text-anchor', 'middle')
+.text(d.value);
+})
+.on("mouseout", function(d) {
+d3.select(this)
+.transition()
+.duration(200)
+.attr("y", function(d) { return y(d.value); })
+.attr("height", function(d) { return height - y(d.value); })
+.attr("fill", "#0e1117");
+svg.selectAll('.value').remove();
+});
+
+});
+
+</script>
+
+<style>
+  text {
+    font-family: Arial, sans-serif;
+  }
+</style>
