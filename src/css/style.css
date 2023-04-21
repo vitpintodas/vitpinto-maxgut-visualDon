@@ -78,6 +78,8 @@
 }
 
 .portrait {
+    object-fit: cover;
+    object-position: 100% 30%;
     align-self: center;
     justify-self: center;
     width: 180px;
