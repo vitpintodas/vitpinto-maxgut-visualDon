@@ -31,5 +31,13 @@ function displayCards() {
     });
 }
 
+/**
+ * Gère le clic sur une carte
+ * TODO: afficher les informations détaillées au clic
+ */
+function clickCard() {
+
+}
+
 // appel de la fonction
 displayCards();

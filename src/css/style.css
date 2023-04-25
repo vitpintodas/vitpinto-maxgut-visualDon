@@ -107,34 +107,10 @@
 /*
 * Media queries pour affichage du background
 */
-@media only screen and (min-device-width: 1200px) {
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("../assets/background/1920-background-van.png");
-    }
-}
-
-@media only screen and (min-device-width: 1020px) {
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("../assets/background/1020-background-van.png");
-    }
-}
-
-@media only screen and (min-device-width: 800px) {
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("../assets/background/800-background-van.png");
-    }
-}
-
 @media only screen and (min-device-width: 400px) {
     body {
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url("../assets/background/800-background-van.png");
+        background-image: url("../assets/background/1920-background-van-ext.png");
     }
 }
