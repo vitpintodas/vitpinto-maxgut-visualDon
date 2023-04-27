@@ -27,6 +27,10 @@ function displayCards() {
 
             // injection du code HTML dans le container
             container.insertAdjacentHTML('afterbegin', node.innerHTML);
+
+            
+
+            document.querySelector('.card').addEventListener('click', clickCard);
         });
     });
 }
@@ -36,7 +40,13 @@ function displayCards() {
  * TODO: afficher les informations détaillées au clic
  */
 function clickCard() {
+    const modal = document.getElementById('modalBox');
+    const close = document.querySelector('.close');
 
+    modal.style.display = "block";
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
 }
 
 // appel de la fonction
