@@ -134,17 +134,18 @@ body {
 }
 
 .modalContent {
-    background-color: #fefefe;
+    background-color: rgb(31, 96, 50);
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 2px solid black;
     width: 80%;
+    border-radius: 2em;
 }
 
 .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
 }
 

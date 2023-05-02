@@ -89,7 +89,7 @@ function clickCard(event) {
 function displayInfos(perso) {
 
     // création de l'espace graphique SVG
-    let svg = d3.select("#modalBox")
+    let svg = d3.select(".modalContent")
     .append("svg")
     .attr("width", 500)
     .attr("height", 500);
