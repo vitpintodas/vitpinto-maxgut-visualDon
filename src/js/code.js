@@ -67,6 +67,7 @@ function clickCard(event) {
             element.classList.remove('blur');
         });
         logo.classList.remove('blur');
+        removeGraph();
     }
 
     window.onclick = function(event) {
@@ -76,11 +77,15 @@ function clickCard(event) {
                 element.classList.remove('blur');
             });
             logo.classList.remove('blur');
+            removeGraph();
         };
     };
 }
 
-// TODO: réussir à supprimer le SVG quand on ferme la modal
+/**
+ * Affichage des graphiques sur les modals
+ * @param {*} perso 
+ */
 function displayInfos(perso) {
 
     // création de l'espace graphique SVG
@@ -184,6 +189,14 @@ function displayInfos(perso) {
             svg.selectAll('.value').remove();
         });
     });
+}
+
+/**
+ * Suppression du graphique
+ */
+function removeGraph() {
+    const svg = document.querySelector('svg');
+    svg.remove();
 }
 
 // appel de la fonction
