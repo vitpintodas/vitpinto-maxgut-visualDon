@@ -8,7 +8,16 @@ export default {
     plugins: [
       viteStaticCopy({
         targets: [
-          { src: "data/", dest: "../dist" },
+          { 
+            // copie fichiers csv
+            src: "data/",
+            dest: "../dist",
+          },
+          { 
+            // copie fichiers dans assets
+            src: "assets/",
+            dest: "../dist",
+          },
         ]
       })
     ]

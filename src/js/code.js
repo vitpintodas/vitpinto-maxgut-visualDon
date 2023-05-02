@@ -42,6 +42,7 @@ function displayCards() {
 function clickCard() {
     const modal = document.getElementById('modalBox');
     const close = document.querySelector('.close');
+    const body = document.querySelector('body');
 
     modal.style.display = "block";
     close.onclick = function() {
