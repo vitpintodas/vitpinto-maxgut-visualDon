@@ -19,7 +19,7 @@ export default {
             dest: "../dist",
           },
           {
-            // copie fichiers dans sections
+            // copie deuxième page
             src: "src/general.html",
             dest: "../dist",
           },
