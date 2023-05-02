@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 #container {
     /* Code reprit depuis codepen from Chris Coyier */
     /* Il a été cependant modifié pour le projet */
@@ -51,6 +55,11 @@
     backdrop-filter: blur(2.9px);
     -webkit-backdrop-filter: blur(2.9px);
     border: 1px solid rgba(31, 96, 50, 0.16);
+}
+
+.card:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.04);
 }
 
 /* nombre de victimes de la personne */
@@ -120,6 +129,10 @@
     overflow: auto;
 }
 
+.modal.active {
+    display: block;
+}
+
 .modalContent {
     background-color: #fefefe;
     margin: auto;
@@ -140,6 +153,13 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*
+* blur effect à l'ouverture du modal
+*/
+.blur {
+    filter: blur(4px);
 }
 
 /*

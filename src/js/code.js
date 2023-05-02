@@ -42,12 +42,35 @@ function displayCards() {
 function clickCard() {
     const modal = document.getElementById('modalBox');
     const close = document.querySelector('.close');
+    const backgroundElements = document.querySelectorAll('.background-element');
+    const logo = document.querySelector('#logo');
     const body = document.querySelector('body');
 
-    modal.style.display = "block";
+    modal.classList.add('active');
+
+    backgroundElements.forEach((element) => {
+        element.classList.add('blur');
+    });
+
+    logo.classList.add('blur');
+
     close.onclick = function() {
-        modal.style.display = "none";
+        modal.classList.remove('active');
+        backgroundElements.forEach((element) => {
+            element.classList.remove('blur');
+        });
+        logo.classList.remove('blur');
     }
+
+    window.onclick = function(event) {
+        if(event.target == modal) {
+            modal.classList.remove('active');
+            backgroundElements.forEach((element) => {
+                element.classList.remove('blur');
+            });
+            logo.classList.remove('blur');
+        };
+    };
 }
 
 // appel de la fonction
