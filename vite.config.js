@@ -18,6 +18,10 @@ export default {
             src: "assets/",
             dest: "../dist",
           },
+          {
+            src: "sections/",
+            dest: "../dist",
+          },
         ]
       })
     ]
