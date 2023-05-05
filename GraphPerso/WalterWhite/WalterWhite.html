@@ -21,8 +21,8 @@
 // création de l'espace graphique SVG
 var svg = d3.select("body")
   .append("svg")
-  .attr("width", 500)
-  .attr("height", 400);
+  .attr("width", 600)
+  .attr("height", 600);
 
 // lecture des données CSV
 d3.csv("data2.csv", function(data) {//ici le nom du fichier csv utilisé et son chemin pour y accéder depuis ce fichier
@@ -92,7 +92,7 @@ svg.append("text")
     svg.append("text")
       .attr('class', 'value')
       .attr('x', xScale(seasons[i]) + xScale.bandwidth() / 2)
-      .attr('y', yScale(d) - 10)
+      .attr('y', yScale(d) - 30)
       .attr('text-anchor', 'middle')
       .text(d);
   })
@@ -103,6 +103,8 @@ svg.append("text")
       .attr("fill", "#0e1117");
     svg.selectAll('.value').remove();
   });
+
+  console.log(yScale(d));
 });
 
 </script>

@@ -14,8 +14,8 @@ function displayCards() {
     /**
      * Récupération des données + affichage dans le HTML
      */
-    d3.csv("../data/data_compress.csv").then(function(data) {
-        data.forEach(function(d) {
+    d3.csv("../data/data_compress.csv").then(function (data) {
+        data.forEach(function (d) {
             // affichage du totale de vitimes
             node.content.querySelector('.victim-number').textContent = Number(d.victims1) + Number(d.victims2) + Number(d.victims3) + Number(d.victims4) + Number(d.victims5);
 
@@ -35,7 +35,6 @@ function displayCards() {
 
 /**
  * Gère le clic sur une carte
- * TODO: afficher les informations détaillées au clic
  */
 function clickCard(event) {
     const modal = document.getElementById('modalBox');
@@ -61,7 +60,7 @@ function clickCard(event) {
     /*
      * fermeture de la modal
      */
-    close.onclick = function() {
+    close.onclick = function () {
         modal.classList.remove('active');
         backgroundElements.forEach((element) => {
             element.classList.remove('blur');
@@ -70,8 +69,8 @@ function clickCard(event) {
         removeGraph();
     }
 
-    window.onclick = function(event) {
-        if(event.target == modal) {
+    window.onclick = function (event) {
+        if (event.target == modal) {
             modal.classList.remove('active');
             backgroundElements.forEach((element) => {
                 element.classList.remove('blur');
@@ -89,105 +88,103 @@ function clickCard(event) {
 function displayInfos(perso) {
 
     // création de l'espace graphique SVG
-    let svg = d3.select(".modalContent")
-    .append("svg")
-    .attr("width", 500)
-    .attr("height", 500);
+
+    var svg = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", 500)
+        .attr("height", 500);
 
     // récupération des données du CSV
-    d3.csv("../data/Data2.csv").then(function(data) {
+    d3.csv("../data/Data2.csv").then(function (data) {
 
         // filtrage des données pour le personnage sélectionné
-        const filtereData = data.filter(function(d) {
-            return d.name == perso;
+        var filtereData = data.filter(function (d) {
+            return d.name === perso;
         });
 
         // extraction des données des victimes pour chaque saison
-        const seasons = ["Saison 1", "Saison 2", "Saison 3", "Saison 4", "Saison 5"];
+        var seasons = ["Saison 1", "Saison 2", "Saison 3", "Saison 4", "Saison 5"];
 
-        const victimData = [];
+        var victimData = [];
 
-        seasons.forEach(function(season) {
+        seasons.forEach(function (season) {
             victimData.push(parseInt(filtereData[0][season]));
         });
 
         // échelle de l'axe y et de l'axe x
-        const xScale = d3.scaleBand()
-        .domain(seasons)
-        .range([50, 450])
-        .padding(0.4);
+        var xScale = d3.scaleBand()
+            .domain(seasons)
+            .range([50, 450])
+            .padding(0.2);
 
-        const yScale = d3.scaleLinear()
-        .domain([0, d3.max(victimData)])
-        .range([350, 50]);
+        var yScale = d3.scaleLinear()
+            .domain([0, d3.max(victimData)])
+            .range([350, 50]);
 
         // création de l'axe x et de l'axe y
-        const xAxis = d3.axisBottom(xScale);
-        const yAxis = d3.axisLeft(yScale);
+        var xAxis = d3.axisBottom(xScale);
+        var yAxis = d3.axisLeft(yScale);
 
         svg.append("g")
-        .attr("transform", "translate(0, 350)")
-        .call(xAxis);
+            .attr("transform", "translate(0, 350)")
+            .call(xAxis);
 
         svg.append("g")
-        .attr("transform", "translate(50, 0)")
-        .call(yAxis);
+            .attr("transform", "translate(50, 0)")
+            .call(yAxis);
 
         // ajout du nom de l'axe y
         svg.append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 0)
-        .attr("x", -200)
-        .attr("dy", "1em")
-        .style("text-anchor", "middle")
-        .text("Nombre de morts");
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0)
+            .attr("x", -200)
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Nombre de morts");
 
         // ajout du nom de l'axe x
         svg.append("text")
-        .attr("y", 380)
-        .attr("x", 225)
-        .attr("dy", "1em")
-        .style("text-anchor", "middle")
-        .text("Saison");
+            .attr("y", 380)
+            .attr("x", 225)
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Saison");
 
         // création des barres
         svg.selectAll("rect")
         .data(victimData)
         .enter()
         .append("rect")
-        .attr("x", function(d, i) {
-            return xScale(seasons[i]);
-        })
-        .attr("y", function(d) {
-            return yScale(d);
-        })
+        .attr("x", function(d, i) { return xScale(seasons[i]); })
+        .attr("y", function(d) { return yScale(d); })
         .attr("width", xScale.bandwidth())
-        .attr("height", function(d) {
-            return 350 - yScale(d);
-        })
+        .attr("height", function(d) { return 350 - yScale(d); })
         .attr("rx", 5)
         .attr("ry", 5)
-        .on("mouseover", function(d, i) {
-            d3.select(this)
-            .transition()
-            .duration(200)
-            .attr("fill", "yellow");
+        .on("mouseover", function (event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr("fill", "yellow")
 
-            svg.append("text")
-            .attr('class', 'value')
-            .attr('x', xScale(seasons[i]) + xScale.bandwidth() / 2)
-            .attr('y', yScale(d) - 10)
-            .attr('text-anchor', 'middle')
-            .text(d);
-        })
-        .on("mouseout", function(d) {
-            d3.select(this)
-            .transition()
-            .duration(200)
-            .attr("fill", "#0e1117");
-            
-            svg.selectAll('.value').remove();
-        });
+                // récupération de l'index de la barre survolée
+                const i = d3.selectAll("rect").nodes().indexOf(this);
+
+                svg.append("text")
+                    .attr('class', 'value')
+                    .attr('x', xScale(seasons[i]) + xScale.bandwidth() / 2)
+                    .attr('y', yScale(d) - 30)
+                    .attr('text-anchor', 'middle')
+                    .text(d);
+            })
+            .on("mouseout", function (d) {
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr("fill", "#0e1117");
+
+                svg.selectAll('.value').remove();
+            });
     });
 }
 
