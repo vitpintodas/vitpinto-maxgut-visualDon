@@ -55,7 +55,8 @@ function clickCard(event) {
     logo.classList.add('blur');
 
     //* affichage des infos dans la modal
-    displayInfos(name);
+    displayGraph(name);
+    displayCompletInfos(name);
 
     /*
      * fermeture de la modal
@@ -81,11 +82,41 @@ function clickCard(event) {
     };
 }
 
+function displayCompletInfos(perso) {
+    const node = document.querySelector('#modalTemplate').cloneNode(true);
+    const modalHeader = document.querySelector('.modalHeader');
+    const allContent = document.querySelectorAll('.modalHeader > div');
+
+    // suppression des infos précédentes sans supprimer le template
+    allContent.forEach((element) => {
+        element.remove();
+    });
+
+    d3.csv("../data/data2.csv").then(function (data) {
+        //console.log(data);
+    });
+
+    d3.csv("../data/data").then(function (data) {
+        //console.log(data);
+    });
+
+    node.content.querySelector("h2").textContent = perso;
+    node.content.querySelector("div").classList = perso;
+
+    modalHeader.insertAdjacentHTML('afterbegin', node.innerHTML);
+}
+
+
+function removeCompleteInfos() {
+    // suppression des infos précédentes sans supprimer le template
+    const modalHeader = document.querySelector('.modalHeader');
+}
+
 /**
  * Affichage des graphiques sur les modals
  * @param {*} perso 
  */
-function displayInfos(perso) {
+function displayGraph(perso) {
 
     // création de l'espace graphique SVG
 
@@ -95,7 +126,7 @@ function displayInfos(perso) {
         .attr("height", 500);
 
     // récupération des données du CSV
-    d3.csv("../data/Data2.csv").then(function (data) {
+    d3.csv("../data/data2.csv").then(function (data) {
 
         // filtrage des données pour le personnage sélectionné
         var filtereData = data.filter(function (d) {
