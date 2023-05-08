@@ -1,7 +1,7 @@
-name,Saison 1,Saison 2,Saison 3,Saison 4,Saison 5
-Walter White,2,7,5,11,12
-Gus Fring,0,8,6,2,0
-Jessie Pinkman,2,1,1,1,3
-Mike Ehrmantraut,0,2,1,3,1
-Saul Goodman,0,0,0,0,0
-Hank Schrader,0,0,1,1,3
+name,Saison 1,Saison 2,Saison 3,Saison 4,Saison 5,Role,Age
+Walter White,2,7,5,11,12,Professeur de chimie devenu baron de la drogue,50
+Gus Fring,0,8,6,2,0,Homme d'affaire propriétaire de Los Pollos Hermanos et baron de la drogue,50
+Jessie Pinkman,2,1,1,1,3,Ancien étudiant et associé de walter white pour fabriquer de la meth,25
+Mike Ehrmantraut,0,2,1,3,1,Ancien policier et tueur à gage qui travaille pour Gus,50
+Saul Goodman,0,0,0,0,0,Avocat corrompu et manipulateur qui représente les intérêts criminels de Walter, Jesse et d'autres personnages de la série,50
+Hank Schrader,0,0,1,1,3,Agent de la Drug Enforcement Administration (DEA), le frère de la femme de Walter, Skyler, et l'oncle de Walter Jr,50
