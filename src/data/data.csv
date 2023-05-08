@@ -2,7 +2,6 @@ Personne morte,Responsable de la mort,Saison,Episode
 Emilio Koyama,Walter White,1,3
 Krazy-8,Walter White,1,3
 No-Doze,Tuco Salamanca,1,3
-Gonzo,N/A,2,9
 Tuco Salamanca,Hank Schrader,2,2
 Convenience Store Clerk,Spooge,3,2
 Spooge,Spooge's Lady,2,6
@@ -20,9 +19,9 @@ Marco Salamanca,Hank Schrader,3,7
 Leonel Salamanca,Mike Ehrmantraut,3,7
 Juan Bolsa's Two Bodyguards,Mexican federales,3,10
 Juan Bolsa,Mexican federales,4,12
-Tomás Cantillo,Rival Dealers,4,7
+Tomás Cantillo,Dealers Rivaux,4,7
 Rival Dealers,Walter White,3,13
-4 Cartel Assassins,Mike Ehrmantraut,3,12
+4 Assassins du cartel,Mike Ehrmantraut,3,12
 Gale Boetticher,Jesse Pinkman,3,13
 Victor,Gustavo Fring,5,1
 Los Pollos Hermanos Driver,Juárez Cartel assassins,4,6
@@ -36,31 +35,67 @@ Juárez Cartel,Gustavo Fring,4,8
 Gaff,Mike Ehrmantraut,4,8
 Joaquin Salamanca,Jesse Pinkman,1,3
 Hector Salamanca,Walter White,4,13
-Tyrus Kitt,Hector Salamanca and Walter White,5,2
-Gustavo Fring,Hector Salamanca and Walter White,4,13
+Tyrus Kitt,Walter White,5,2
+Gustavo Fring,Walter White,4,13
 Two Albuquerque Mafia guards,Walter White,4,13
-Peter Schuler,Himself,5,2
 Duane Chow,Chris Mara,5,2
 Chris Mara,Mike Ehrmantraut,5,2
 Drew Sharp,Todd Alquist,5,5
 Mike Ehrmantraut,Walter White,5,7
-Dan Wachsberger,Jack Welker who was contracted by Walter White,5,8
-Ron Forenall,Jack Welker who was contracted by Walter White,5,8
-Jack McGann,Jack Welker who was contracted by Walter White,5,8
-Andrew Holt,Jack Welker who was contracted by Walter White,5,8
-Anthony Perez,Jack Welker who was contracted by Walter White,5,8
-Isaac Conley,Jack Welker who was contracted by Walter White,5,9
-William Moniz,Jack Welker who was contracted by Walter White,5,9
-Harris Boivin,Jack Welker who was contracted by Walter White,5,9
-Raymond Martinez,Jack Welker who was contracted by Walter White,5,9
-Dennis Markowski,Jack Welker who was contracted by Walter White,2,4
-Eight of Declan's men and his cook,Lydia Rodarte-Quayle and Jack Welker,5,9
-Declan,Jack Welker, on orders from Lydia Rodarte-Quayle,5,10
-Steven Gomez,Jack Welker and the White Supremacist Gang,5,13
+Dan Wachsberger,Walter White,5,8
+Ron Forenall,Walter White,5,8
+Jack McGann,Walter White,5,8
+Andrew Holt,Walter White,5,8
+Anthony Perez,Walter White,5,8
+Isaac Conley,Walter White,5,9
+William Moniz,Walter White,5,9
+Harris Boivin,Walter White,5,9
+Raymond Martinez,Walter White,5,9
+Dennis Markowski,Walter White,2,4
+Eight of Declan's men and his cook,Lydia Rodarte-Quayle,5,9
+Declan,Jack Welker,Lydia Rodarte-Quayle,5,10
+Steven Gomez,Jack Welker,5,13
 Hank Schrader,Jack Welker,5,14
 Andrea Cantillo,Todd Alquist,5,12
 Kenny, Matt,Walter White,5,13
 Todd Alquist,Jesse Pinkman,5,16
 Jack Welker,Walter White,5,16
 Lydia Rodarte-Quayle,Walter White,5,16
-Walter White,Himself,5,16
+add,Hank Schrader,5,14
+add,Hank Schrader,5,14
+add,Hank Schrader,5,14
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Walter White,5,16
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Gustavo Fring,4,13
+add,Mike Ehrmantraut,4,13
+add,Mike Ehrmantraut,4,13
+add,Jesse Pinkman,4,13
+add,Jesse Pinkman,4,13
+add,Jesse Pinkman,4,13
+add,Jesse Pinkman,4,13
+add,Jesse Pinkman,4,13
