@@ -211,6 +211,12 @@ body {
     align-items: center;
 }
 
+.persoInfos {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /*
 * blur effect à l'ouverture du modal
 */
