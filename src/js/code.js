@@ -96,13 +96,15 @@ function displayCompletInfos(perso) {
         // filtrage des données en fonction de perso
         const filtereData = data.filter(d => d.name === perso);
 
+        // remplacement des données du DOM
         node.content.querySelector("h2").textContent = perso;
-        node.content.querySelector("div").classList = perso;
+        //node.content.querySelector("div").classList = perso;
         node.content.querySelector("img").src = `assets/personnages/${perso}.png`;
-        node.content.querySelector(".age").textContent = filtereData[0].Age.toString();
-        node.content.querySelector(".role").textContent = filtereData[0].Role;
-        node.content.querySelector(".victimes").textContent = Number(filtereData[0]["Saison 1"]) + Number(filtereData[0]["Saison 2"]) + Number(filtereData[0]["Saison 3"]) + Number(filtereData[0]["Saison 4"]) + Number(filtereData[0]["Saison 5"]);
+        node.content.querySelector(".age").textContent = `${filtereData[0].Age.toString()} ans`;
+        node.content.querySelector(".role").textContent = `${filtereData[0].Role}`;
+        node.content.querySelector(".victimes").textContent = `${Number(filtereData[0]["Saison 1"]) + Number(filtereData[0]["Saison 2"]) + Number(filtereData[0]["Saison 3"]) + Number(filtereData[0]["Saison 4"]) + Number(filtereData[0]["Saison 5"])}`;
 
+        // récupération des informations de mort
         d3.csv("../data/data.csv").then(function (data) {
             // filtrage des données en fonction de perso
             const filtereData = data.filter(d => d["Personne morte"] === perso);
@@ -110,13 +112,12 @@ function displayCompletInfos(perso) {
             // check si mort ou pas et affichage du statut
             if(filtereData[0] != undefined)
             {
-                node.content.querySelector(".mort").textContent = filtereData[0]["Saison"] + " - " + filtereData[0]["Episode"];
+                node.content.querySelector(".mort").textContent = `Saison ${filtereData[0]["Saison"]} - Episode ${filtereData[0]["Episode"]}`;
             } else {
-                node.content.querySelector(".mort").textContent = "Vivant";
+                node.content.querySelector(".mort").textContent = "Toujours en vie";
             }
 
-            console.log(filtereData[0]);
-
+            // insértion des infos dans le HTML du template
             modalHeader.insertAdjacentHTML('afterbegin', node.innerHTML);
         });
     });
@@ -181,7 +182,10 @@ function displayGraph(perso) {
             .attr("x", -200)
             .attr("dy", "1em")
             .style("text-anchor", "middle")
-            .text("Nombre de morts");
+            .style("font-size", "20px")
+            .style("font-family", "Roboto")
+            .style("fill", "White")
+            .text("Nombre de victimes");
 
         // ajout du nom de l'axe x
         svg.append("text")
@@ -189,6 +193,9 @@ function displayGraph(perso) {
             .attr("x", 225)
             .attr("dy", "1em")
             .style("text-anchor", "middle")
+            .style("font-size", "20px")
+            .style("font-family", "Roboto")
+            .style("fill", "White")
             .text("Saison");
 
         // création des barres
@@ -216,7 +223,8 @@ function displayGraph(perso) {
                     .attr('x', xScale(seasons[i]) + xScale.bandwidth() / 2)
                     .attr('y', yScale(d) - 30)
                     .attr('text-anchor', 'middle')
-                    .text(d);
+                    .text(d)
+                    .style("fill", "White");
             })
             .on("mouseout", function (d) {
                 d3.select(this)

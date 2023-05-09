@@ -41,14 +41,14 @@
             <!-- contenu du modal -->
             <div class="modalContent">
                 <span class="close">&times;</span>
+                <h1 class="modal-title">Informations sur le personnage</h1>
                 <div class="modalHeader">
                     <template id="modalTemplate">
-                        <div>
-                            <div>
-                                <h1>Informations personnages</h1>
-                            </div>
+                        <div class="info-perso">
+                            <img class="portrait" src="" alt="Image du personnage">
                             <h2>Nom personnage</h2>
-                            <img src="" alt="Image du personnage">
+                            <hr class="rounded">
+                            <!--
                             <ul class="persoInfos">
                                 <li>
                                     <p class="age">Age : </p>
@@ -62,8 +62,25 @@
                                 <li>
                                     <p class="mort">Décès : </p>
                                 </li>
-                            </ul>
-                            <p>Description du modal</p>
+                            </ul> -->
+                            <table>
+                                <tr>
+                                    <td class="title">Age : </td>
+                                    <td class="age description"></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Role : </td>
+                                    <td class="role description"></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Nombre de victimes : </td>
+                                    <td class="victimes description"></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Décès : </td>
+                                    <td class="mort description"></td>
+                                </tr>
+                            </table>
                         </div>
                     </template>
                 </div>
