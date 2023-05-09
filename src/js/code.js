@@ -14,16 +14,16 @@ function displayCards() {
     /**
      * Récupération des données + affichage dans le HTML
      */
-    d3.csv("../data/data_compress.csv").then(function (data) {
+    d3.csv("../data/data2.csv").then(function (data) {
         data.forEach(function (d) {
             // affichage du totale de vitimes
-            node.content.querySelector('.victim-number').textContent = Number(d.victims1) + Number(d.victims2) + Number(d.victims3) + Number(d.victims4) + Number(d.victims5);
+            node.content.querySelector('.victim-number').textContent = Number(d["Saison 1"]) + Number(d["Saison 2"]) + Number(d["Saison 3"]) + Number(d["Saison 4"]) + Number(d["Saison 5"]);
 
             // affichage de la photo du personnage
-            node.content.querySelector('.cara-img img').src = `assets/personnages/${d.name}.png`;
+            node.content.querySelector('.cara-img img').src = `assets/personnages/${d["name"]}.png`;
 
             // affichage du nom du personnage
-            node.content.querySelector('.cara-name').textContent = d.name;
+            node.content.querySelector('.cara-name').textContent = d["name"];
 
             // injection du code HTML dans le container
             container.insertAdjacentHTML('afterbegin', node.innerHTML);
@@ -96,11 +96,6 @@ function displayCompletInfos(perso) {
         // filtrage des données en fonction de perso
         const filtereData = data.filter(d => d.name === perso);
 
-        console.log(node.content.querySelector(".age").textContent);
-        console.log(filtereData[0].Age.toString());
-
-        console.log(node.content.querySelector(".age").textContent = filtereData[0].Age.toString());
-
         node.content.querySelector("h2").textContent = perso;
         node.content.querySelector("div").classList = perso;
         node.content.querySelector("img").src = `assets/personnages/${perso}.png`;
@@ -109,14 +104,22 @@ function displayCompletInfos(perso) {
         node.content.querySelector(".victimes").textContent = Number(filtereData[0]["Saison 1"]) + Number(filtereData[0]["Saison 2"]) + Number(filtereData[0]["Saison 3"]) + Number(filtereData[0]["Saison 4"]) + Number(filtereData[0]["Saison 5"]);
 
         d3.csv("../data/data.csv").then(function (data) {
-            const filtereData = data.filter(d => d.name === perso);
+            // filtrage des données en fonction de perso
+            const filtereData = data.filter(d => d["Personne morte"] === perso);
+
+            // check si mort ou pas et affichage du statut
+            if(filtereData[0] != undefined)
+            {
+                node.content.querySelector(".mort").textContent = filtereData[0]["Saison"] + " - " + filtereData[0]["Episode"];
+            } else {
+                node.content.querySelector(".mort").textContent = "Vivant";
+            }
+
+            console.log(filtereData[0]);
+
+            modalHeader.insertAdjacentHTML('afterbegin', node.innerHTML);
         });
-
-
-        modalHeader.insertAdjacentHTML('afterbegin', node.innerHTML);
     });
-
-    node.content.querySelector("div").classList = perso;
 }
 
 /**
