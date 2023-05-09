@@ -94,21 +94,28 @@ function displayCompletInfos(perso) {
 
     d3.csv("../data/data2.csv").then(function (data) {
         // filtrage des données en fonction de perso
-        var filtereData = data.filter(d => d.name === perso);
+        const filtereData = data.filter(d => d.name === perso);
 
         console.log(node.content.querySelector(".age").textContent);
         console.log(filtereData[0].Age.toString());
 
         console.log(node.content.querySelector(".age").textContent = filtereData[0].Age.toString());
 
+        node.content.querySelector("h2").textContent = perso;
+        node.content.querySelector("div").classList = perso;
+        node.content.querySelector("img").src = `assets/personnages/${perso}.png`;
         node.content.querySelector(".age").textContent = filtereData[0].Age.toString();
         node.content.querySelector(".role").textContent = filtereData[0].Role;
         node.content.querySelector(".victimes").textContent = Number(filtereData[0]["Saison 1"]) + Number(filtereData[0]["Saison 2"]) + Number(filtereData[0]["Saison 3"]) + Number(filtereData[0]["Saison 4"]) + Number(filtereData[0]["Saison 5"]);
 
+        d3.csv("../data/data.csv").then(function (data) {
+            const filtereData = data.filter(d => d.name === perso);
+        });
+
+
         modalHeader.insertAdjacentHTML('afterbegin', node.innerHTML);
     });
 
-    node.content.querySelector("h2").textContent = perso;
     node.content.querySelector("div").classList = perso;
 }
 
