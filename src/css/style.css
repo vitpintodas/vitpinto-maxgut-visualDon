@@ -228,13 +228,13 @@ body {
 .tooltip {
   position: absolute;
   text-align: center;
-  width: 250px;
-  height: 100px;
-  padding: 5px;
-  font: 25px sans-serif;
+  width: 166px;
+  height: 66px;
+  padding: 3.3px;
+  font: 16.6px sans-serif;
   background: yellow;
   border: 0px;
-  border-radius: 20px;
+  border-radius: 13.3px;
   pointer-events: none;
 }
 

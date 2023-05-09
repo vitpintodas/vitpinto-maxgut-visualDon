@@ -59,10 +59,10 @@ function displaySeconGraph() {
             })
             .attr("cx", width / 2)
             .attr("cy", height / 2)
-            .attr("fill", "green")
+            .attr("fill", "rgb(31, 96, 50)")
             .attr("opacity", 1)
             .on("mouseover", function (event, d) {
-                d3.select(this).attr("opacity", 1.0);
+                d3.select(this).attr("opacity", 1);
                 tooltip.style("visibility", "visible");
                 tooltip.text(d.key);
                 tooltip.text(d.key + " - " + d.value + " victime(s)");
