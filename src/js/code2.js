@@ -9,7 +9,7 @@ function displaySeconGraph() {
     // chargement des données
     d3.csv("../data/data.csv").then(function (data) {//mettre a jour vers le chemin du fichier csv
         // création du tableau des responsables de la mort avec le nombre de morts qu'ils ont causés
-        const responsables = d3.nest()
+        const responsables = d3.group()
             .key(function (d) { return d["Responsable de la mort"]; })
             .rollup(function (v) { return v.length; })
             .entries(data);
