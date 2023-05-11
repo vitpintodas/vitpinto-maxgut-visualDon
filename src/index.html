@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr-ch">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breaking Bad Killers</title>
 
     <!-- lien vers le css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- lien vers le code javascript -->
     <script type="module" src="js/code.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- container des cartes de personnage -->
     <div id="container" class="baclground-blur">
-        <!-- Template HTML pour permettre affichage de toutes les cards -->
-        <template id="template">
-            <div class="card background-element">
-                <div class="victim-number">
-                    N
-                </div>
-                <div class="cara-img">
-                    <img src="assets/personnages/walter.png" alt="image_personnage" loading="lazy" class="portrait">
-                </div>
-                <div class="cara-name">
-                    nom personnage
-                </div>
-            </div>
-        </template>
-        <!-- Logo de la série cliquable -->
-        <div id="logo">
-            <a href="./general.html">
-                <img src="assets/logo/breakingBad-logo.png" alt="Logo de breaking bad" loading="lazy">
-            </a>
+      <!-- Template HTML pour permettre affichage de toutes les cards -->
+      <template id="template">
+        <div class="card background-element">
+          <div class="victim-number">N</div>
+          <div class="cara-img">
+            <img
+              src="assets/personnages/walter.png"
+              alt="image_personnage"
+              loading="lazy"
+              class="portrait"
+            />
+          </div>
+          <div class="cara-name">nom personnage</div>
         </div>
+      </template>
+      <div class="action">
+        <div>
+          <p><span class="arrow">&#8592;</span> let's cook b*tch !</p>
+        </div>
+      </div>
+      <!-- Logo de la série cliquable -->
+      <div id="logo">
+        <a href="./general.html">
+          <img
+            src="assets/logo/breakingBad-logo.png"
+            alt="Logo de breaking bad"
+            loading="lazy"
+          />
+        </a>
+      </div>
 
-        <!-- modal -->
-        <div id="modalBox" class="modal">
-            <!-- contenu du modal -->
-            <div class="modalContent">
-                <span class="close">&times;</span>
-                <h1 class="modal-title">Informations sur le personnage</h1>
-                <div class="modalHeader">
-                    <template id="modalTemplate">
-                        <div class="info-perso">
-                            <img class="portrait" src="" alt="Image du personnage">
-                            <h2>Nom personnage</h2>
-                            <hr class="rounded">
-                            <table>
-                                <tr>
-                                    <td class="title">Age : </td>
-                                    <td class="age description"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Role : </td>
-                                    <td class="role description"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Nombre de victimes : </td>
-                                    <td class="victimes description"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Décès : </td>
-                                    <td class="mort description"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </template>
-                </div>
-                <div class="modalBody">
-                    <div id="my_dataviz">
-                    
-                    </div>
-                </div>
-            </div>
+      <!-- modal -->
+      <div id="modalBox" class="modal">
+        <!-- contenu du modal -->
+        <div class="modalContent">
+          <span class="close">&times;</span>
+          <h1 class="modal-title">Informations sur le personnage</h1>
+          <div class="modalHeader">
+            <template id="modalTemplate">
+              <div class="info-perso">
+                <img class="portrait" src="" alt="Image du personnage" />
+                <h2>Nom personnage</h2>
+                <hr class="rounded" />
+                <table>
+                  <tr>
+                    <td class="title">Age :</td>
+                    <td class="age description"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">Role :</td>
+                    <td class="role description"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">Nombre de victimes :</td>
+                    <td class="victimes description"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">Décès :</td>
+                    <td class="mort description"></td>
+                  </tr>
+                </table>
+              </div>
+            </template>
+          </div>
+          <div class="modalBody">
+            <div id="my_dataviz"></div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

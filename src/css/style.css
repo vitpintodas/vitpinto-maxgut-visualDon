@@ -25,6 +25,12 @@ body {
   align-content: stretch;
   align-items: end;
   margin-right: 284px;
+  filter: drop-shadow(-4px 8px 8px rgba(0, 0, 0, 1));
+}
+
+#logo img:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.80)) grayscale(100%);
+  transform: scale(1.1);
 }
 
 /*
@@ -120,6 +126,39 @@ body {
 }
 
 /*
+* Affichage du texte qui indique l'intéraction
+* ------------------------------------------------------------------------------------------------------------------
+*/
+
+.action {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.action div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 44px;
+}
+
+.action p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.action p span {
+  font-size: 1.8em;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+
+/*
 * Code qui gère l'affichage des modales
 * ------------------------------------------------------------------------------------------------------------------
 */
@@ -183,12 +222,6 @@ body {
 .modalHeader {
   grid-row: 2;
   grid-column: 1 /2;
-  /*
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;*/
 }
 
 .modal-title {
