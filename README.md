@@ -58,3 +58,14 @@ Quand on clique sur le logo breaking bad sur la page d'accueil on a accès a une
 en scrollant depuis cette visualisation, on a accès finalement au personnage le plus meurtrier de la série, avec des infos sur lui.
 
 ![wireframe](https://user-images.githubusercontent.com/91839631/225916179-139f3b48-496a-4d11-abbb-709dca630fc9.png)
+
+------------------------
+
+## Rendu Final
+
+Lien de notre Rendu sur Netlify : https://breaking-bad-deaths.netlify.app/
+
+Le rendu se trouve sur ce repo github
+
+Résumé des données:
+Après avoir testé notre API sur Breaking Bad qui n'était plus en service, nous avons créés nous même nos données sur 2 fichiers .CSV (se trouvent dans le projet dans les datas) en prenant les données sur divers sites liés à Breaking Bad
